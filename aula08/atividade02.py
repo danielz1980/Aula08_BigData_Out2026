@@ -1,18 +1,17 @@
-# # REVISAR #
+numeros = []
 
-# numeros = []
-# resposta = 'S'
+while True:
+    numero = int(input('\nInforme um número inteiro: '))
+    numeros.append(numero)
+    resposta = input("\nDeseja continuar [S/N] ? ").upper()[0]
+    if resposta == "N":
+        break
 
-# while resposta != "N":
-#     numero = input('Informe um número inteiro: ')
-#     if isinstance(numero, int):
-#         numeros.append(numero)
-#     elif numero == 'N':
-#         resposta = 'N'
-#     else:
-#         print('Número inválido')
+quantidade = len(numeros)
+soma = sum(numeros)
+lista_ordenada = sorted(numeros)
 
-# quantidade = len(numeros)
-
-# print(f'\nNúmeros computados: {numeros}')
-# print(f'\nQuantidade de números: {quantidade}')
+print(f'\nNúmeros computados: {numeros}')
+print(f'Quantidade de números: {quantidade}')
+print(f'Somatório dos números: {soma}')
+print(f'Números ordenados: {lista_ordenada}')
